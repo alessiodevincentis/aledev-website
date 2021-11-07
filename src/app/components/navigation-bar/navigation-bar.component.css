@@ -13,3 +13,8 @@
   font-size: 1.3rem;
   font-weight: 700;
 }
+
+.menu-item:hover {
+  color: #e63946;
+  cursor: pointer;
+}
