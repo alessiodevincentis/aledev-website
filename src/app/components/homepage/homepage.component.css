@@ -2,12 +2,14 @@
   font-size: 3.3rem;
   font-weight: 700;
   color: #1d3557;
+  text-align: center;
 }
 
 .home-sub-title {
   font-size: 2rem;
   font-weight: 700;
   color: #1d3557;
+  text-align: center;
 }
 
 ::ng-deep .p-card {
@@ -26,4 +28,33 @@
 
 ::ng-deep .p-button {
   border: 1px solid #457b9d;
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 768px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-sub-title {
+    font-size: 1.3rem;
+  }
+
+  .avatar-image {
+    height: 30vh;
+  }
+
+  ::ng-deep .p-card {
+    margin: 1rem 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  ::ng-deep .p-card {
+    margin: 2rem 10rem;
+  }
+
+  .avatar-image {
+    height: 30vh;
+  }
 }

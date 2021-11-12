@@ -7,6 +7,8 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
 import { HomepageComponent } from './components/homepage/homepage.component';
 import {CardModule} from "primeng/card";
 import {ButtonModule} from "primeng/button";
+import {SidebarModule} from "primeng/sidebar";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import {ButtonModule} from "primeng/button";
     NavigationBarComponent,
     HomepageComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CardModule,
-    ButtonModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        CardModule,
+        ButtonModule,
+        SidebarModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

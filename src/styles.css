@@ -1,3 +1,15 @@
 body {
   background: url("assets/images/tile_background.png");
+  font-family: odin !important;
+}
+
+@font-face {
+  font-family: "odin";
+  src: local("odin"), url(assets/fonts/odin/odin-light.otf) format("opentype");
+}
+
+body,
+body .p-component
+{
+  font-family: "odin", sans-serif;
 }

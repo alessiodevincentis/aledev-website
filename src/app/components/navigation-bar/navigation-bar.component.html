@@ -1,12 +1,40 @@
-<div [style]="{'background-color':'#1d3557'}" class="grid flex align-content-center flex-wrap">
-  <div class="col-6 flex align-items-center">
-    <p class="p-component logo bit-margin">ale<span [style]="{'color':'#e63946'}">.</span>developer</p>
+<ng-container *ngIf="!isMobileLayout">
+  <div [style]="{'background-color':'#1d3557'}" class="grid flex align-content-center flex-wrap">
+    <div class="col-6 flex align-items-center">
+      <p class="p-component logo bit-margin">ale<span [style]="{'color':'#e63946'}">.</span>developer</p>
+    </div>
+    <div class="col-6 flex align-items-center justify-content-end">
+      <p class="p-component menu-item bit-margin">about</p>
+      <p class="p-component menu-item bit-margin">works</p>
+      <p class="p-component menu-item bit-margin">writings</p>
+      <p class="p-component menu-item bit-margin">contact</p>
+      <i [style]="{'color':'white','font-size':'1.4rem','margin-left':'1rem'}" class="pi pi-moon bit-margin"></i>
+    </div>
   </div>
-  <div class="col-6 flex align-items-center justify-content-end">
-    <p class="p-component menu-item bit-margin">about</p>
-    <p class="p-component menu-item bit-margin">works</p>
-    <p class="p-component menu-item bit-margin">writings</p>
-    <p class="p-component menu-item bit-margin">contact</p>
-    <i [style]="{'color':'white','font-size':'1.4rem','margin-left':'1rem'}" class="pi pi-moon bit-margin"></i>
+</ng-container>
+
+<ng-container *ngIf="isMobileLayout">
+  <div [style]="{'background-color':'#1d3557'}"  class="grid">
+    <div class="col-2 flex align-content-center flex-wrap">
+      <p-button [style]="{'background-color':'transparent'}" class="flex align-items-center justify-content-center" icon="pi pi-bars"
+                (onClick)="openSideBar = true"></p-button>
+    </div>
+    <div class="col-10 flex justify-content-end align-content-center flex-wrap">
+      <p class="p-component logo bit-margin">ale<span [style]="{'color':'#e63946'}">.</span>developer</p>
+    </div>
   </div>
-</div>
+
+  <p-sidebar [closeOnEscape]="true"  [(visible)]="openSideBar" [baseZIndex]="999">
+    <div class="grid">
+      <div class="col-12">
+        <p-button [style]="{'width':'100%','background-color':'transparent','color':'#5876aa'}" label="Home"></p-button>
+      </div>
+      <div class="col-12">
+        <p-button [style]="{'width':'100%','background-color':'transparent','color':'#5876aa'}" label="Evidenze"></p-button>
+      </div>
+      <div class="col-12">
+        <p-button [style]="{'width':'100%','background-color':'transparent','color':'#5876aa'}" label="Azioni"></p-button>
+      </div>
+    </div>
+  </p-sidebar>
+</ng-container>
