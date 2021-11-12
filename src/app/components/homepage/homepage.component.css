@@ -9,3 +9,21 @@
   font-weight: 700;
   color: #1d3557;
 }
+
+::ng-deep .p-card {
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+::ng-deep .p-ripple {
+  background-color: #457b9d;
+  margin: 1rem;
+}
+
+::ng-deep .p-button {
+  border: 1px solid #457b9d;
+}
