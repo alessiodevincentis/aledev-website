@@ -10,6 +10,9 @@ import {ButtonModule} from "primeng/button";
 import {SidebarModule} from "primeng/sidebar";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { LastArticlesComponent } from './components/last-articles/last-articles.component';
+import {FormsModule} from "@angular/forms";
+import {InputTextModule} from "primeng/inputtext";
+import {InputTextareaModule} from "primeng/inputtextarea";
 
 @NgModule({
   declarations: [
@@ -18,14 +21,17 @@ import { LastArticlesComponent } from './components/last-articles/last-articles.
     HomepageComponent,
     LastArticlesComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        AppRoutingModule,
-        CardModule,
-        ButtonModule,
-        SidebarModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    CardModule,
+    ButtonModule,
+    SidebarModule,
+    FormsModule,
+    InputTextModule,
+    InputTextareaModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

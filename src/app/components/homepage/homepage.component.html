@@ -48,4 +48,26 @@
         quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
     </p-card>
   </div>
+  <div class="col-12 flex align-items-center justify-content-center header-articles-container">
+    <p>Talk to me</p>
+  </div>
+  <div class="col-12">
+    <div class="grid">
+      <div class="col-12">
+        <h5>Name</h5>
+        <input [style]="{'width':'100%'}" type="text" pInputText [(ngModel)]="nameForm">
+      </div>
+      <div class="col-12">
+        <h5>Email</h5>
+        <input pinputText [style]="{'width':'100%'}" type="text" pInputText [(ngModel)]="emailForm">
+      </div>
+      <div class="col-12">
+        <h5>Message</h5>
+        <textarea [style]="{'width':'100%'}" rows="5" cols="30" pInputTextarea></textarea>
+      </div>
+      <div class="col-12">
+        <p-button label="Send message" icon="pi pi-send" ></p-button>
+      </div>
+    </div>
+  </div>
 </div>
