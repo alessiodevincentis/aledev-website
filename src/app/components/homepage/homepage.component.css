@@ -12,9 +12,20 @@
   text-align: center;
 }
 
+.header-articles-container {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1d3557;
+  text-align: center;
+}
+
 ::ng-deep .p-card {
   box-shadow: none;
   border-radius: 5px;
+}
+
+::ng-deep .p-card:hover {
+  cursor: pointer;
 }
 
 .no-margin {
@@ -44,17 +55,30 @@
     height: 30vh;
   }
 
-  ::ng-deep .p-card {
+  ::ng-deep .home-card .p-card {
     margin: 1rem 1rem;
+  }
+
+  ::ng-deep .last-article-even .p-card, ::ng-deep .last-article-odd .p-card {
+    margin: 0.6rem 1rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  ::ng-deep .p-card {
+  ::ng-deep .home-card .p-card {
     margin: 2rem 10rem;
   }
 
   .avatar-image {
     height: 30vh;
   }
+
+  ::ng-deep .last-article-odd .p-card {
+    margin: 0 0 0 2.3rem;
+  }
+
+  ::ng-deep .last-article-even .p-card {
+    margin: 0 2.3rem 0 0;
+  }
+
 }

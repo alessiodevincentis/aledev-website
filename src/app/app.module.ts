@@ -9,12 +9,14 @@ import {CardModule} from "primeng/card";
 import {ButtonModule} from "primeng/button";
 import {SidebarModule} from "primeng/sidebar";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { LastArticlesComponent } from './components/last-articles/last-articles.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationBarComponent,
-    HomepageComponent
+    HomepageComponent,
+    LastArticlesComponent
   ],
     imports: [
         BrowserModule,
