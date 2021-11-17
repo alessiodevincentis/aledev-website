@@ -1,27 +1,32 @@
 .home-title {
   font-size: 3.3rem;
-  font-weight: 700;
-  color: #1d3557;
+  font-weight: 900;
+  text-align: center;
   text-align: center;
 }
 
 .home-sub-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #1d3557;
   text-align: center;
 }
 
 .header-articles-container {
   font-size: 2rem;
-  font-weight: 700;
-  color: #1d3557;
+  font-weight: 900;
   text-align: center;
 }
 
+.subtitle-view-all:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  text-decoration-thickness: 3px;
+}
+
 ::ng-deep .p-card {
-  box-shadow: none;
-  border-radius: 5px;
+  border: 3px solid #1d3557;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
 }
 
 ::ng-deep .p-card:hover {
@@ -59,7 +64,7 @@
     margin: 1rem 1rem;
   }
 
-  ::ng-deep .last-article-even .p-card, ::ng-deep .last-article-odd .p-card {
+  ::ng-deep .last-article-even .p-card, ::ng-deep .last-article-odd .p-card, ::ng-deep .recent-work .p-card {
     margin: 0.6rem 1rem;
   }
 }
@@ -79,6 +84,10 @@
 
   ::ng-deep .last-article-even .p-card {
     margin: 0 2.3rem 0 0;
+  }
+
+  ::ng-deep .recent-work .p-card {
+    margin: 0 2.3rem 0 2.3rem;
   }
 
 }

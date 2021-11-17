@@ -7,22 +7,22 @@
           />
         </div>
         <div class="col-12 flex align-items-center justify-content-center">
-          <p class="p-component home-title no-margin">Hello, I'm Alessio De Vincentis</p>
+          <p class="home-title no-margin">Hello, I'm Alessio De Vincentis</p>
         </div>
         <div class="col-12 flex align-items-center justify-content-center">
-          <p class="p-component home-sub-title no-margin">Full stack developer. Content creator. Based in Italy.</p>
+          <p class="home-sub-title no-margin">Full stack developer. Content creator. Based in Italy.</p>
         </div>
         <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center lg:justify-content-end md:justify-content-end">
-          <p-button label="See my works" icon="pi pi-users"  badge="8"></p-button>
+          <button>See my works</button>
         </div>
         <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center lg:justify-content-start md:justify-content-start">
-          <p-button  label="Read my writings" icon="pi pi-users"  badge="13"></p-button>
+          <button>Read my writings</button>
         </div>
       </div>
     </p-card>
   </div>
   <div class="col-12 flex align-items-center justify-content-center header-articles-container">
-    <p>Last articles<br><span [style]="{'font-size':'1.3rem'}">(or view them all if you want)</span></p>
+    <p>Last articles<br><span class="subtitle-view-all" [style]="{'font-size':'1.3rem'}">(or view them all if you want)</span></p>
   </div>
   <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center">
     <p-card class="last-article-odd" header="How to create a responsive navigation bar in Angular">
@@ -44,6 +44,34 @@
   </div>
   <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center">
     <p-card class="last-article-even" header="How to create a responsive navigation bar in Angular">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+    </p-card>
+  </div>
+
+  <div class="col-12 flex align-items-center justify-content-center header-articles-container">
+    <p>Recent works<br><span class="subtitle-view-all" [style]="{'font-size':'1.3rem'}">(or view them all if you want)</span></p>
+  </div>
+  <div class="col-12 flex align-items-center justify-content-center">
+    <p-card class="recent-work" header="How to create a responsive navigation bar in Angular">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+    </p-card>
+  </div>
+  <div class="col-12 flex align-items-center justify-content-center">
+    <p-card class="recent-work" header="How to create a responsive navigation bar in Angular">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+    </p-card>
+  </div>
+  <div class="col-12 flex align-items-center justify-content-center">
+    <p-card class="recent-work" header="How to create a responsive navigation bar in Angular">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+    </p-card>
+  </div>
+  <div class="col-12 flex align-items-center justify-content-center">
+    <p-card class="recent-work" header="How to create a responsive navigation bar in Angular">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
         quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
     </p-card>
@@ -52,22 +80,24 @@
     <p>Talk to me</p>
   </div>
   <div class="col-12">
-    <div class="grid">
-      <div class="col-12">
-        <h5>Name</h5>
-        <input [style]="{'width':'100%'}" type="text" pInputText [(ngModel)]="nameForm">
+    <p-card class="home-card">
+      <div class="grid">
+        <div class="col-12">
+          <h5>Name</h5>
+          <input [style]="{'width':'100%'}" type="text" pInputText [(ngModel)]="nameForm">
+        </div>
+        <div class="col-12">
+          <h5>Email</h5>
+          <input pinputText [style]="{'width':'100%'}" type="text" pInputText [(ngModel)]="emailForm">
+        </div>
+        <div class="col-12">
+          <h5>Message</h5>
+          <textarea [style]="{'width':'100%'}" rows="5" cols="30" pInputTextarea></textarea>
+        </div>
+        <div class="col-12 flex align-items-center justify-content-center">
+          <button>Send message</button>
+        </div>
       </div>
-      <div class="col-12">
-        <h5>Email</h5>
-        <input pinputText [style]="{'width':'100%'}" type="text" pInputText [(ngModel)]="emailForm">
-      </div>
-      <div class="col-12">
-        <h5>Message</h5>
-        <textarea [style]="{'width':'100%'}" rows="5" cols="30" pInputTextarea></textarea>
-      </div>
-      <div class="col-12">
-        <p-button label="Send message" icon="pi pi-send" ></p-button>
-      </div>
-    </div>
+    </p-card>
   </div>
 </div>

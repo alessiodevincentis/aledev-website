@@ -10,6 +10,15 @@
   left: 0;
   right: 0;
   z-index: 1000;
+  background-color: #2F4858;
+}
+
+::ng-deep .p-sidebar .p-sidebar-header .p-sidebar-close, .p-sidebar .p-sidebar-header .p-sidebar-icon  {
+  color: #2F4858;
+}
+
+::ng-deep .p-sidebar {
+  background-color: #FFEFCA;
 }
 
 
@@ -24,6 +33,6 @@
 }
 
 .menu-item:hover {
-  color: #e63946;
+  color: #FBCA1F;
   cursor: pointer;
 }
