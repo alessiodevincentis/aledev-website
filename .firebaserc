@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "aledev-website": {
+      "hosting": {
+        "aledev-website": [
+          "aledev-website"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "aledev-website"
+  }
+}

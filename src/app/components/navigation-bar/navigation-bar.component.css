@@ -36,3 +36,9 @@
   color: #FBCA1F;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .logo  {
+    font-size: 1.3rem;
+  }
+}

@@ -13,13 +13,15 @@ import { LastArticlesComponent } from './components/last-articles/last-articles.
 import {FormsModule} from "@angular/forms";
 import {InputTextModule} from "primeng/inputtext";
 import {InputTextareaModule} from "primeng/inputtextarea";
+import { ArticleComponent } from './components/article/article.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationBarComponent,
     HomepageComponent,
-    LastArticlesComponent
+    LastArticlesComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,

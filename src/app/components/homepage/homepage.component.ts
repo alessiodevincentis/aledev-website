@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-homepage',
@@ -9,9 +10,12 @@ export class HomepageComponent implements OnInit {
   nameForm: any;
   emailForm: any;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  openArticle() {
+    this.router.navigate(['article']);
+  }
 }
