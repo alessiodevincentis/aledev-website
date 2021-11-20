@@ -6,9 +6,18 @@
           <p>How to create a responsive navigation bar in Angular</p>
         </div>
         <div class="col-12 flex align-items-center justify-content-center">
-          <span class="date-time-info">18 November 2021</span>
-          <span><i [style]="{'font-weight':800}" class="pi pi-clock"></i></span>
-          <span class="date-time-info">5 minutes read</span>
+          <div [style]="{'width':'100%'}" class="grid">
+            <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center
+              lg:justify-content-end md:justify-content-end">
+              <span><i [style]="{'font-weight':800}" class="pi pi-calendar"></i></span>
+              <span class="date-time-info">18 November 2021</span>
+            </div>
+            <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center
+            lg:justify-content-start md:justify-content-start">
+              <span><i [style]="{'font-weight':800}" class="pi pi-clock"></i></span>
+              <span class="date-time-info">5 minutes read</span>
+            </div>
+          </div>
         </div>
         <div class="col-12 flex align-items-center justify-content-center">
           <button class="button-tag">Angular</button>
@@ -16,16 +25,24 @@
           <button class="button-tag">Javascript</button>
         </div>
         <div class="col-12">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+          <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
             quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
         </div>
         <div class="col-12">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+          <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
             quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
             quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
             quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
             quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
             quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+        </div>
+        <div class="col-12 flex align-items-center justify-content-center">
+          <p class="title-paragraph">1. Create the CSS details</p>
+        </div>
+        <div class="col-12 flex align-items-center justify-content-center">
+          <pre [style]="{'background-color':'#FFF9EE','padding':'1rem','white-space':'pre-wrap','overflow-wrap':'break-word'}">
+              <code [style]="{'color':'#2F4858'}" [innerHTML]="code"></code>
+          </pre>
         </div>
       </div>
     </p-card>
