@@ -49,3 +49,8 @@ button:active {
   font-weight: 800;
   font-size: 1.2rem;
 }
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
