@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {ThemeService} from "../../services/theme-service/theme.service";
 
 @Component({
   selector: 'app-navigation-bar',
@@ -9,7 +10,7 @@ export class NavigationBarComponent implements OnInit {
   openSideBar = false;
   isMobileLayout = false;
 
-  constructor() { }
+  constructor(private themeService: ThemeService) { }
 
   ngOnInit(): void {
     this.isMobileLayout = window.innerWidth < 768;
@@ -21,4 +22,7 @@ export class NavigationBarComponent implements OnInit {
 
   }
 
+  changeTheme() {
+    this.themeService.changeTheme();
+  }
 }

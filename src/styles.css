@@ -1,5 +1,14 @@
+:root {
+  --navbar-color: #2F4858;
+  --text-color: #ffffff;
+  --body-color: #FFEFCA;
+  --pre-background-color: #FFF9EE;
+  --footer-text: white;
+  --button-color: #FBCA1F;
+}
+
 body {
-  background: #FFEFCA;
+  background: var(--body-color);
 }
 
 @font-face {
@@ -19,12 +28,12 @@ body .p-component
 }
 
 button {
-  background-color: #FBCA1F;
+  background-color: var(--button-color);
   font-family: inherit;
   padding: 0.6em 1.3em;
   font-weight: 900;
   font-size: 18px;
-  border: 3px solid #2F4858;
+  border: 3px solid var(--navbar-color);
   border-radius: 0.4em;
   box-shadow: 0.1em 0.1em;
 }
@@ -53,4 +62,31 @@ button:active {
 pre {
   white-space: pre-wrap;
   word-break: break-word;
+  background-color:var(--pre-background-color);
+  padding:1rem;
+}
+
+code {
+  color:var(--navbar-color);
+}
+
+.footer {
+  background-color: var(--navbar-color);
+  margin-bottom: -0.5rem;
+  padding: 2.6rem;
+}
+
+.footer-icon {
+  color: var(--footer-text);
+  margin-left: 0.6rem;
+  margin-right: 0.6rem;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--navbar-color);
 }

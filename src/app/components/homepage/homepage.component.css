@@ -37,15 +37,6 @@
   margin: 0;
 }
 
-::ng-deep .p-ripple {
-  background-color: #457b9d;
-  margin: 1rem;
-}
-
-::ng-deep .p-button {
-  border: 1px solid #457b9d;
-}
-
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 768px) {
   .home-title {

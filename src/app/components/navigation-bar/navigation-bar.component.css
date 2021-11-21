@@ -4,15 +4,6 @@
   font-weight: 700;
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: #2F4858;
-}
-
 ::ng-deep .p-sidebar .p-sidebar-header .p-sidebar-close, .p-sidebar .p-sidebar-header .p-sidebar-icon  {
   color: #2F4858;
 }
