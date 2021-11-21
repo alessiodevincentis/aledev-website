@@ -22,10 +22,10 @@
     </p-card>
   </div>
   <div class="col-12 flex align-items-center justify-content-center header-articles-container">
-    <p>Last articles<br><span class="subtitle-view-all" [style]="{'font-size':'1.3rem'}">(or view them all if you want)</span></p>
+    <p>Recent works<br><span class="subtitle-view-all" [style]="{'font-size':'1.3rem'}">(or view them all if you want)</span></p>
   </div>
   <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center">
-    <p-card (click)="openArticle()" class="last-article-odd" header="How to create a responsive navigation bar in Angular">
+    <p-card class="last-article-odd" header="Tracker, light service stats Enel replatforming and migration">
       <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
         quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
     </p-card>
@@ -50,10 +50,10 @@
   </div>
 
   <div class="col-12 flex align-items-center justify-content-center header-articles-container">
-    <p>Recent works<br><span class="subtitle-view-all" [style]="{'font-size':'1.3rem'}">(or view them all if you want)</span></p>
+    <p>Last articles<br><span class="subtitle-view-all" [style]="{'font-size':'1.3rem'}">(or view them all if you want)</span></p>
   </div>
   <div class="col-12 flex align-items-center justify-content-center">
-    <p-card class="recent-work" header="How to create a responsive navigation bar in Angular">
+    <p-card (click)="openArticle()" class="recent-work" header="How to create a responsive navigation bar in Angular">
       <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
         quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
     </p-card>
@@ -82,6 +82,18 @@
   <div class="col-12">
     <p-card class="home-card">
       <div class="grid">
+        <div class="col-12 lg:col-4 md:col-4 lg:justify-content-end md:justify-content-end flex align-items-center justify-content-center">
+          <i [style]="{'margin-right':'0.8rem'}" class="pi pi-phone"></i>
+          <p>3403885497</p>
+        </div>
+        <div class="col-12 lg:col-4 md:col-4 flex align-items-center justify-content-center">
+          <i [style]="{'margin-right':'0.8rem'}" class="pi pi-wallet"></i>
+          <p>aledevdeveloper@dev.it</p>
+        </div>
+        <div class="col-12 lg:col-4 md:col-4 lg:justify-content-start md:justify-content-start flex align-items-center justify-content-center">
+          <i [style]="{'margin-right':'0.8rem'}" class="pi pi-map"></i>
+          <p>Whatever you are</p>
+        </div>
         <div class="col-12">
           <h5>Name</h5>
           <input [style]="{'width':'100%'}" type="text" pInputText [(ngModel)]="nameForm">

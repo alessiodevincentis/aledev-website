@@ -14,6 +14,7 @@ import {FormsModule} from "@angular/forms";
 import {InputTextModule} from "primeng/inputtext";
 import {InputTextareaModule} from "primeng/inputtextarea";
 import { ArticleComponent } from './components/article/article.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ArticleComponent } from './components/article/article.component';
     NavigationBarComponent,
     HomepageComponent,
     LastArticlesComponent,
-    ArticleComponent
+    ArticleComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
