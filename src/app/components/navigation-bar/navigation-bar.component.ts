@@ -24,7 +24,7 @@ export class NavigationBarComponent implements OnInit {
   }
 
   changeTheme() {
-    this.themeService.changeTheme();
+    this.themeService.changeTheme(!this.darkMode);
     this.darkMode = !this.darkMode;
   }
 }
