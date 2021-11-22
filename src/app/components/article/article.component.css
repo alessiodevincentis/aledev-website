@@ -5,9 +5,10 @@
 }
 
 ::ng-deep .article-card .p-card  {
-  border: 3px solid #1d3557;
+  border: 3px solid var(--card-border);
   border-radius: 0.4em;
   box-shadow: 0.1em 0.1em;
+  background-color: var(--card-background);
 }
 
 .date-time-info {

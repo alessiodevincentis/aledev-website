@@ -9,6 +9,7 @@ import {ThemeService} from "../../services/theme-service/theme.service";
 export class NavigationBarComponent implements OnInit {
   openSideBar = false;
   isMobileLayout = false;
+  darkMode = false;
 
   constructor(private themeService: ThemeService) { }
 
@@ -24,5 +25,6 @@ export class NavigationBarComponent implements OnInit {
 
   changeTheme() {
     this.themeService.changeTheme();
+    this.darkMode = !this.darkMode;
   }
 }

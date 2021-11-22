@@ -5,10 +5,20 @@
   --pre-background-color: #FFF9EE;
   --footer-text: white;
   --button-color: #FBCA1F;
+  --card-background: white;
+  --card-border: #1d3557;
+  --text-color: #000;
+  --card-title: #3f3f46;
+  --article-info:#3f3f46;
+  --code-snippet: #2F4858;
 }
 
 body {
   background: var(--body-color);
+}
+
+p {
+  color: var(--text-color);
 }
 
 @font-face {
@@ -49,12 +59,20 @@ button:active {
   box-shadow: 0.05em 0.05em;
 }
 
+
+.article-info {
+  color: var(--article-info);
+}
+
 .article-p {
   line-height: 1.8;
 }
 
+.p-card .p-card-title {
+  color: var(--card-title);
+}
+
 .title-paragraph {
-  color: #2F4858;
   font-weight: 800;
   font-size: 1.2rem;
 }
@@ -67,7 +85,7 @@ pre {
 }
 
 code {
-  color:var(--navbar-color);
+  color:var(--code-snippet);
 }
 
 .footer {

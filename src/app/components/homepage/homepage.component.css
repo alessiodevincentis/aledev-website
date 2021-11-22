@@ -24,7 +24,7 @@
 }
 
 ::ng-deep .p-card {
-  border: 3px solid #1d3557;
+  border: 3px solid var(--card-border);
   border-radius: 0.4em;
   box-shadow: 0.1em 0.1em;
 }
@@ -35,6 +35,11 @@
 
 .no-margin {
   margin: 0;
+}
+
+::ng-deep .home-card .p-card,
+::ng-deep .last-article-even .p-card, ::ng-deep .last-article-odd .p-card, ::ng-deep .recent-work .p-card{
+  background-color: var(--card-background);
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
