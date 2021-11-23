@@ -13,69 +13,47 @@
           <p class="home-sub-title no-margin">Full stack developer. Content creator. Based in Italy.</p>
         </div>
         <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center lg:justify-content-end md:justify-content-end">
-          <button>See my works</button>
+          <button (click)="scrollTo('recent-works-div')">See my works</button>
         </div>
         <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center lg:justify-content-start md:justify-content-start">
-          <button>Read my writings</button>
+          <button (click)="scrollTo('last-articles-div')">Read my writings</button>
         </div>
       </div>
     </p-card>
   </div>
-  <div class="col-12 flex align-items-center justify-content-center header-articles-container">
+  <div id="recent-works-div" class="col-12 flex align-items-center justify-content-center header-articles-container">
     <p>Recent works<br><span class="subtitle-view-all" [style]="{'font-size':'1.3rem'}">(or view them all if you want)</span></p>
   </div>
-  <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center">
-    <p-card class="last-article-odd" header="Tracker, light service stats Enel replatforming and migration">
-      <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-    </p-card>
-  </div>
-  <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center">
-    <p-card class="last-article-even" header="How to create a responsive navigation bar in Angular">
-      <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-    </p-card>
-  </div>
-  <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center">
-    <p-card class="last-article-odd" header="How to create a responsive navigation bar in Angular">
-      <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-    </p-card>
-  </div>
-  <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center">
-    <p-card class="last-article-even" header="How to create a responsive navigation bar in Angular">
-      <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-    </p-card>
-  </div>
+  <ng-container *ngFor="let work of works, let i = index">
+    <div class="col-12 lg:col-6 md:col-6 flex align-items-center justify-content-center">
+      <p-card [ngClass]="i%2===0 ? 'last-article-odd':'last-article-even'" class="" [header]="work.name!">
+        <ng-template pTemplate="subtitle">
+          <ng-container *ngFor="let category of work.categories">
+            <button class="home-tag">{{category}}</button>
+          </ng-container>
+        </ng-template>
+        <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+          quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+      </p-card>
+    </div>
+  </ng-container>
 
-  <div class="col-12 flex align-items-center justify-content-center header-articles-container">
+  <div id="last-articles-div" class="col-12 flex align-items-center justify-content-center header-articles-container">
     <p>Last articles<br><span class="subtitle-view-all" [style]="{'font-size':'1.3rem'}">(or view them all if you want)</span></p>
   </div>
-  <div class="col-12 flex align-items-center justify-content-center">
-    <p-card (click)="openArticle()" class="recent-work" header="How to create a responsive navigation bar in Angular">
-      <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-    </p-card>
-  </div>
-  <div class="col-12 flex align-items-center justify-content-center">
-    <p-card class="recent-work" header="How to create a responsive navigation bar in Angular">
-      <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-    </p-card>
-  </div>
-  <div class="col-12 flex align-items-center justify-content-center">
-    <p-card class="recent-work" header="How to create a responsive navigation bar in Angular">
-      <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-    </p-card>
-  </div>
-  <div class="col-12 flex align-items-center justify-content-center">
-    <p-card class="recent-work" header="How to create a responsive navigation bar in Angular">
-      <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-        quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-    </p-card>
-  </div>
+  <ng-container *ngFor="let article of articles">
+    <div class="col-12 flex align-items-center justify-content-center">
+      <p-card (click)="openArticle(article.id)" class="recent-work" [header]="article.title!">
+        <ng-template pTemplate="subtitle">
+          <i [style]="{'font-weight':800}" class="pi pi-calendar"></i>
+          <span [style]="{'margin-left':'0.6rem'}">{{article.dataInserimento!.toDate() | date}}</span>
+        </ng-template>
+        <p class="article-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+          quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+      </p-card>
+    </div>
+  </ng-container>
+
   <div class="col-12 flex align-items-center justify-content-center header-articles-container">
     <p>Talk to me</p>
   </div>

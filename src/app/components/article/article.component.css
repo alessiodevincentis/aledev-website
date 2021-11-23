@@ -16,11 +16,6 @@
   margin: 0.7rem;
 }
 
-.button-tag {
-  padding: 0;
-  margin: 0.3rem;
-}
-
 @media screen and (min-width: 768px) {
   ::ng-deep .article-card .p-card  {
     margin: 2rem 10rem;

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {Article} from "../../model/article";
+import {AngularFirestore} from "@angular/fire/compat/firestore";
 
 @Component({
   selector: 'app-article',
@@ -6,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
+
+  idArticle?: string;
+  article?: Article;
 
   code = `
 body {
@@ -60,9 +66,18 @@ button:active {
   }
  `;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private firestore: AngularFirestore) { }
 
   ngOnInit(): void {
+    this.idArticle = this.route.snapshot.paramMap.get('articleId')!;
+    if(this.idArticle) {
+      this.getArticleById();
+    }
   }
 
+  private getArticleById() {
+    this.firestore.collection('articles').doc<Article>(this.idArticle).valueChanges().subscribe(data => {
+      this.article = data;
+    })
+  }
 }

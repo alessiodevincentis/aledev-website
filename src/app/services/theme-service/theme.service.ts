@@ -18,5 +18,6 @@ export class ThemeService {
       document.documentElement.style.setProperty('--article-info', isDarkMode?'#F8F9F9':'#3f3f46');
       document.documentElement.style.setProperty('--pre-background-color', isDarkMode?'#292929':'#FFF9EE');
       document.documentElement.style.setProperty('--code-snippet', isDarkMode?'#E0E0E0':'#2F4858');
+    document.documentElement.style.setProperty('--sidebar-color', isDarkMode?'#FFEFCA':'#222831');
   }
 }

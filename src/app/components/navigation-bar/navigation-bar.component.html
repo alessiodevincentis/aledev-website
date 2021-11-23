@@ -44,9 +44,9 @@
         <button [style]="{'width':'100%'}">Contact</button>
       </div>
       <div class="col-12">
-        <i (click)="changeTheme()"
-           [style]="{'color':darkMode ? '#FFD369' : 'white','font-size':'1.4rem','margin-left':'1rem'}"
-           [ngClass]="darkMode ? 'pi pi-sun bit-margin' : 'pi pi-moon bit-margin'"></i>
+        <button [style]="{'width':'100%'}"  (click)="changeTheme()">
+          <i [ngClass]="darkMode ? 'pi pi-sun' : 'pi pi-moon'"></i>
+        </button>
       </div>
     </div>
   </p-sidebar>

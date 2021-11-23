@@ -5,11 +5,12 @@
 }
 
 ::ng-deep .p-sidebar .p-sidebar-header .p-sidebar-close, .p-sidebar .p-sidebar-header .p-sidebar-icon  {
-  color: #2F4858;
+  color: #FFEFCA;
+  background-color: #2F4858;
 }
 
 ::ng-deep .p-sidebar {
-  background-color: #FFEFCA;
+  background-color: var(--sidebar-color);
 }
 
 

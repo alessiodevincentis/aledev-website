@@ -15,6 +15,9 @@ import {InputTextModule} from "primeng/inputtext";
 import {InputTextareaModule} from "primeng/inputtextarea";
 import { ArticleComponent } from './components/article/article.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {AngularFirestore} from "@angular/fire/compat/firestore";
+import {AngularFireModule} from "@angular/fire/compat";
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AppRoutingModule,
     CardModule,
     ButtonModule,
@@ -36,7 +40,7 @@ import { FooterComponent } from './components/footer/footer.component';
     InputTextModule,
     InputTextareaModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
